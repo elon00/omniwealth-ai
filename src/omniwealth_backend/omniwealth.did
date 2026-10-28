@@ -1,0 +1,14 @@
+type PortfolioHoldings = record {
+    total_valuation_usd: nat64;
+    solana_balance_usd: nat64;
+    arbitrum_balance_usd: nat64;
+    base_balance_usd: nat64;
+    algorand_balance_usd: nat64;
+    stellar_balance_usd: nat64;
+    crypto_exposure_percentage: nat8;
+};
+
+service : {
+    "get_portfolio_summary": () -> (PortfolioHoldings) query;
+    "verify_threshold_signature_route": (text) -> (variant { Ok: text; Err: text });
+}

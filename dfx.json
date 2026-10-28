@@ -1,0 +1,19 @@
+{
+  "canisters": {
+    "omniwealth_backend": {
+      "type": "rust",
+      "package": "omniwealth_backend",
+      "candid": "src/omniwealth_backend/omniwealth.did"
+    },
+    "omniwealth_frontend": {
+      "type": "assets",
+      "source": ["src/omniwealth_frontend/dist"]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
